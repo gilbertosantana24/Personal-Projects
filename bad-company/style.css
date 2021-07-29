@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    background-color: black;
+}
+
+header {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    
+    
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ul {
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+ul li {
+    list-style: none;
+    margin-top: 1.5rem;
+    padding: 7px 7px;
+    margin-right: 50px;
+    font-size: 24px;
+}
+
+li:hover {
+    color: red;
+}
+
+header img {
+    width: 5%;
+    height: 5%;
+    margin-left: 50px;
+}
+
+
+
+main {
+    margin-left: 43rem;
+    margin-top: 0.8rem;
+}
+
+main h1 {
+    color: white;
+    padding-bottom: 1.5rem;
+}
+
+.home {
+    margin-top: 2rem;
+    display: flex;
+}
+
+.home img {
+    width: 50%;
+    padding: 0 2rem 0 2rem;
+}
+
+.home p {
+    position: absolute;
+    color: red;
+    background-color: black;
+    padding: 0.5rem 0.5rem;
+    display: none;
+}
+
+.home img:hover + p{
+    display: block;
+}
+
+#p1 {
+    margin-left: 27rem;
+    margin-top: 18rem;
+}
+
+#p2 {
+margin-left: 89rem;
+margin-top: 18rem;
+}
+
+.home img:hover {
+    opacity: 0.5;
+}
+
+#sub-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    margin-left: 5rem;
+    align-items: center;
+    width: 110rem;
+    position: relative;
+}
+
+#sub-content .sub-left {
+    position: relative;
+    width: 85rem;
+    background: linear-gradient(to left, #ffffff, #ff0000);
+    padding: 20px;
+    height: 12.6rem;
+    box-sizing: border-box;
+    margin-bottom: 2rem;
+}
+
+#sub-content .sub-left p {
+    width: 80%;
+    text-align: justify;
+    margin-top: 20px;
+}
+
+
+
+#sub-content .sub-left img {
+    position: absolute;
+    width: 25%;
+    top: 0px;
+    left: 85rem;
+    border: 12px solid #ffffff; 
+}
+
+#content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+    margin-left: 5rem;
+    align-items: center;
+    width: 110rem;
+    position: relative;
+}
+
+#content .content {
+    position: relative;
+    width: 85rem;
+    background: linear-gradient(to left, #ffffff, #ff0000);
+    padding: 15px;
+    height: 12.6rem;
+    box-sizing: border-box;
+    margin-bottom: 2rem;
+}
+
+#content .content p{
+    width: 80%;
+    text-align: justify;
+    margin-top: 20px;
+    align-items: center;
+}
+
+#content .content img {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    top: 0px;
+    left: 85rem;
+    border: 12px solid #ffffff; 
+}
+
+footer  {
+background-color: black;
+color: white;
+height: 15rem;
+display: flex;
+justify-content: space-evenly;
+padding: 1.5rem;
+font-size: 20px;
+}
+
+
+footer img {
+    width: 2.3rem;
+    height: 2.3rem;
+    margin-left: 5rem;
+}
+
+footer img:hover{ 
+    opacity: 0.5;
+}
+
+.location {
+    display: flex;
+}
+
+.location img {
+width: 55.5rem;
+margin-left: 2rem;
+}
+
+.location p {
+    color: white;
+    text-align: justify;
+    line-height: 2.5rem;
+    width: 57rem;
+    margin-left: 2rem;
+}
+
+.location button {
+    position: absolute;
+    width: 14rem;
+    height: 3.2rem;
+    margin-left: 59.5rem;
+    margin-top: 20rem;
+    background-color: red;
+    border-style: none;
+}
+
+.location button:hover {
+    opacity: 0.5;
+}
+
+.train {
+    color: white;
+    margin-left: 50rem;
+    margin-top: 2rem;
+}
+
+.socialmedia img  {
+    position: absolute;
+}
+
+.socialmedia #fb {
+    left: 51.5rem;
+}
+
+.socialmedia #ig {
+    left: 56rem;
+}
+
+#partners {
+    background-color: white;
+    justify-content: space-evenly;
+    align-items: center;
+  
+}
+
+#partners img{ 
+    width: 22rem;
+    margin-left: 30rem;
+}
+
+#partners #hn {
+    width: 12rem;
+    margin-left: 25rem;
+}
+
+#partners h2{
+    padding-top: 1rem;
+    margin-left: 47rem;
+}
+
+.contact img {
+    margin-left: 0rem;
+}

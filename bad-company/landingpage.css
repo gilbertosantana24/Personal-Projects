@@ -1,0 +1,224 @@
+html , body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: "ubuntu" , sans-serif;
+    color: #fff; 
+}
+
+body {
+    padding: 50px;
+    background-color: #000000;
+}
+
+.container {
+    width: 1440px;
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul li {
+    position: relative;
+    list-style-type: none;
+}
+
+nav ul li a {
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 0 35px;
+    transition: all .05s ease-in-out;
+    border-right: 1px solid #fff;
+}
+
+nav ul li a:hover {
+    color: #ff0000;
+    text-decoration: underline;
+}
+
+
+nav .logo {
+text-decoration: none;
+font-weight: bolder;
+font-size: 35px;
+color: rgb(255, 255, 255);
+left: 50px;
+
+
+}
+
+.container img {
+    width: 10%;
+    border-style: none;
+    position: absolute;
+    
+}
+
+#hero {
+    width: 100%;
+    min-height: 600px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero .hero-text {
+    width: 50%;
+    max-width: 50%;
+}
+
+#hero .hero-image {
+    width: 50%;
+    
+}
+
+
+#hero h1 {
+    position: relative;
+    font-weight: 700;
+    font-size: 30px;
+}
+#hero p {
+    border: none;
+    position: relative;
+    font-size: 15px;
+    letter-spacing: 6px;
+    margin-bottom: 50px;
+    text-align: justify;
+}
+
+#hero button {
+    position: relative;
+    padding: 10px 25px;
+    color: white;
+    background: none;
+    border: none;
+    font-size: 20px; 
+    transition: all .5s ease-in-out;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#hero button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #ff0000;
+    width: 30%;
+    height: 100%;
+    border-radius: 3px;
+    z-index: -1;
+    transition: all .5s ease-in-out;
+}
+
+#hero button:hover::before {
+    width: 100%;
+}
+
+#hero button:hover {
+    color: rgb(0, 0, 0); 
+}
+
+#hero img {
+    position: absolute;
+    top: 250px;
+    right: 220px;
+    width: 600px;
+}
+
+#sub-content .social-icons img {
+    position: relative;
+    top: 0;
+    width: 40%;
+    margin: 0 10px;
+    border-radius: 50%;
+    opacity: .8;
+    transition: all .5s ease-in-out;
+    cursor: pointer; 
+}
+
+#sub-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+#sub-content .sub-left {
+    position: relative;
+    width: 69%;
+    background: linear-gradient(to left, #ffffff, #ff0000);
+    padding: 20px;
+    height: 200px;
+    min-height: 200px;
+    box-sizing: border-box;
+}
+
+#sub-content .sub-left p {
+    width: 80%;
+    text-align: justify;
+    margin-top: 20px;
+}
+
+#sub-content .sub-left img {
+    position: absolute;
+    width: 15%;
+    top: 5px;
+    right: -100px;
+    border: 12px solid #000000; 
+}
+
+#sub-content .sub-left button {
+    position: relative;
+    background: none;
+    border: none;
+    margin-top: 15px;
+    transition: all .5s ease-in-out;
+    margin-bottom: 10px;
+    color: white;
+}
+
+#sub-content .sub-left button::after {
+    content: "->";
+    position: absolute;
+    right: -25px; 
+    transition: all .5s ease-in-out;
+}
+
+#sub-content .sub-left button:hover {
+    color: #000000;
+}
+
+#sub-content .sub-left button:hover::after {
+    right: -25px;
+}
+
+.social-icons {
+    display: flex;
+    width: 160px;
+}
+
+#sub-content .social-icons img:hover {
+    top: -15px;
+} 
+
