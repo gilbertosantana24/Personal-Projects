@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    font-family: monospace;
+}
+
+.page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 10px;
+    padding: 10px;
+}
+
+.container {
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.hidden {
+    visibility: hidden;
+    position: absolute;
+}
+
+.output {
+    top: 0;
+    color: black;
+}
+
+h2 .output {
+    margin: 8px 0;
+}
+
+#myPlayers{
+    font-size: 1.2rem;
+}
+
+textarea, input {
+    margin-bottom: 10px;
+}
+
+input{
+    width: 100%;
+}
+
+#button {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    transition: 0.2s ease-in-out;
+}
+
+#button:hover {
+    opacity: 0.7;
+}
+
+.title{
+    color: blue;
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+#reset {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    transition: 0.2s ease-in-out;
+}
+
+#reset:hover{
+    opacity: 0.7;
+}
+
+.teams{
+    padding: 30px;
+    color: white;
+    font-size: 1.2em;
+}
+
+p {
+    margin: 15px;
+}
+

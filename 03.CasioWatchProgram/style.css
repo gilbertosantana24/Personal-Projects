@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono');
+
+
+*{
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(81, 255, 0);
+    font-size: 14px;
+    margin: 0;
+    position: relative;
+}
+
+.container {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.band {
+    position: absolute;
+    background-color: #222;
+    height: 100vh;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 280px
+}
+
+.band .watch {
+    box-shadow: 0 0 6px #000
+}
+
+.watch {
+    background-color: #14171e;
+    border: 15px solid #a7a7a7;
+    border-radius: 40px;
+    display: inline-block;
+    margin-top: -webkit-calc(50vh - 141px);
+    margin-top: calc(50vh - 141px);
+    padding: 25px 40px;
+    position: relative
+}
+
+@-webkit-keyframes a {
+    to {
+        min-width: 8px
+    }
+}
+@keyframes a {
+    to {
+        min-width: 8px
+    }
+}
+
+.logo_header {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.7em;
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+.illuminator_header {
+    color: blue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-size: 1em;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.water_resist_header {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.watch_body {
+    background-color: #8e9ba3;
+    box-shadow: inset 0 0 8px 0 rgba(0, 0, 0, .75);
+    color: #2c3844;
+    font-family: 'Share Tech Mono', monospace;
+    letter-spacing: 2px;
+    margin: 10px 0;
+    min-width: 290px;
+    padding: 5px 10px;
+    position: relative;
+    text-align: right;
+    -webkit-text-stroke: .5px currentColor
+}
+
+.watch_body_clockType {
+    display: inline-block;
+    font-family: Helvetica Neue;
+    font-size: .8em;
+    font-weight: 700;
+    float: left;
+    padding-top: 20px;
+    text-align: right;
+    text-transform: uppercase
+}
+
+.watch_body_date, .watch_body_stopwatch_header {
+    font-size: 2em;
+    padding-bottom: 5px;
+    padding-top: 5px
+}
+
+.watch_body_date_day {
+    margin-right: 25px
+}
+
+.watch_body_stopwatch_m, .watch_body_stopwatch_s, .watch_body_time_h, .watch_body_time_m {
+    display: inline-block;
+    font-size: 5.2em;
+}
+
+.watch_body_stopwatch_m:after, .watch_body_time_h:after {
+    content: ":"
+}
+
+.watch_body_stopwatch_ms,
+.watch_body_time_s {
+    font-size: 2.4em;
+    letter-spacing: 4px;
+    padding-left: 15px
+}
+
+.watch_body_settings {
+    color: #fff;
+    font-family: Helvetica Neue;
+    font-size: .8em;
+    font-weight: 400;
+    text-transform: uppercase
+}
+
+.watch_body_settings>span {
+    position: absolute
+}
+
+.watch_body_setting_light {
+    left: -8px;
+    top: 85px;
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg)
+}
+
+.watch_body_setting_light::before {
+    background-color: #cc4a3c;
+    border-radius: 50%;
+    display: inline-block;
+    height: 6px;
+    width: 6px;
+    content: "";
+    margin-right: 5px
+}
+
+.watch_body_setting_mode {
+    bottom: 70px;
+    left: -11px;
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg)
+}
+.watch_body_setting_mode:after {
+    background-color: #cc4a3c;
+    border-radius: 50%;
+    display: inline-block;
+    height: 6px;
+    width: 6px;
+    content: "";
+    margin-left: 5px
+}
+.watch_body_setting_startStop {
+    bottom: 75px;
+    right: -28px;
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg)
+}
+.watch_body_setting_startStop:before {
+    background-color: #cc4a3c;
+    border-radius: 50%;
+    display: inline-block;
+    height: 6px;
+    width: 6px;
+    content: "";
+    margin-right: 5px
+}
+
+.watch_body_stopwatch_header {
+    text-align: center;
+}
+
+.watch_buttons button {
+    background-color: #9a9a9a;
+    border: 1px solid #414141;
+    height: 20px;
+    outline: 0;
+    padding: 0;
+    position: absolute;
+    min-width: 10px
+}
+
+.watch_buttons button:hover {
+    cursor: pointer;
+}
+
+.watch_buttons button:active {
+    -webkit-animation: a 50ms forwards;
+    animation: a 50ms forwards;
+}
+
+
+.watch_buttons_light {
+    top: 85px
+}
+.watch_buttons_light,
+.watch_buttons_mode {
+    border-right: 0;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    box-shadow: inset -5px 0 5px -5px #000;
+    right: -webkit-calc(100% + 15px);
+    right: calc(100% + 15px)
+}
+.watch_buttons_mode {
+    bottom: 70px
+}
+.watch_buttons_startStop {
+    border-left: none;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    box-shadow: inset 5px 0 5px -5px #000;
+    bottom: 70px;
+    left: -webkit-calc(100% + 15px);
+    left: calc(100% + 15px)
+}
+.watch_footer {
+    text-align: center
+}
+.watch_footer-illuminator {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-style: italic
+}
+.watch_footer_illuminator:after,
+.watch_footer_illuminator:before {
+    content: "\25BA";
+    display: inline-block;
+    font-size: .8em;
+    font-style: normal;
+    padding-left: 5px
+}
+.watch_footer_illuminator:before {
+    -webkit-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+    transform: scaleX(-1)
+}
+.watch_footer_alarm {
+    color: #ad9b43;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase
+}
+
+.js_show {
+    display: block
+}
+.js_hide {
+    display: none
+}
+.js_invisible {
+    visibility: hidden
+}
+.js_indiglo {
+    background-color: aqua
+}
