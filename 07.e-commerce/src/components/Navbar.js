@@ -5,15 +5,25 @@ import '../Styles/nav.css';
 const Navbar = () => {
 
     return(
-        <div className="nav">
-            <nav>
-            <ul>
-                <li><Link to="/"> Home </Link></li>
-                <li><Link to="/login"> Log In </Link></li>
-                <li><Link to="signup">Sign up </Link></li>
-            </ul>
-            </nav>
-        </div>
+        <>
+        <nav className="navbar">
+        {/* <!-- LOGO --> */}
+        <div className="logo">  Amazontle</div>
+        {/* <!-- NAVIGATION MENU --> */}
+        <ul className="nav-links">
+            {/* <!-- USING CHECKBOX HACK --> */}
+            <input type="checkbox" id="checkbox_toggle" />
+            <label for="checkbox_toggle" className="hamburger">&#9776;</label>
+            {/* <!-- NAVIGATION MENUS --> */}
+            <div className="menu">
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/login">Hello, Log In</Link></li>
+                <li className="signup"><Link to="/">Sign Up</Link></li>
+                <li><Link to="/contact">Orders and Returns</Link></li>
+            </div>
+        </ul>
+    </nav>
+    </>        
 
     )
 }
