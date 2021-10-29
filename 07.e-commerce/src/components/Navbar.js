@@ -4,7 +4,7 @@ import '../Styles/nav.css';
 
 const Navbar = () => {
 
-    return(
+    return (
         <div className="navbar">
             <img src="http://pngimg.com/uploads/amazon/amazon_PNG25.png" alt="amznLogo" />
 
@@ -14,16 +14,16 @@ const Navbar = () => {
 
             <div className="navbar_nav">
                 <div className="nav_option">
-                    <span>Home</span>
+                    <Link to="/">Home</Link>
                 </div>
 
 
                 <div className="nav_option">
-                <span>Log In</span>
+                    <Link to="/login">Log In</Link>
                 </div>
 
                 <div className="nav_option">
-                <span> Sign Up</span>
+                    <Link to="/signup"> Sign Up</Link>
                 </div>
 
                 <div className="cart">
