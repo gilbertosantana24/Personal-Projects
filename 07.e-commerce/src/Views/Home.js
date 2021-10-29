@@ -9,16 +9,16 @@ const Home = () => {
 
     useEffect(() => {
         fetch(Constants.apiUrl)
-        .then((response) => response.json())
-        .then((e) => setItems(e))
-    }, [] );
+            .then((response) => response.json())
+            .then((e) => setItems(e))
+    }, []);
 
-    
+
     return (
         <>
-        <h1>Home</h1>
+            <h1>Home</h1>
 
-            <ProductsGrids items = {items} />
+            <ProductsGrids items={items} />
 
         </>
     )
