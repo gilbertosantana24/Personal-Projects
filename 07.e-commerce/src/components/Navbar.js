@@ -5,25 +5,35 @@ import '../Styles/nav.css';
 const Navbar = () => {
 
     return(
-        <>
-        <nav className="navbar">
-        {/* <!-- LOGO --> */}
-        <div className="logo">  Amazontle</div>
-        {/* <!-- NAVIGATION MENU --> */}
-        <ul className="nav-links">
-            {/* <!-- USING CHECKBOX HACK --> */}
-            <input type="checkbox" id="checkbox_toggle" />
-            <label for="checkbox_toggle" className="hamburger">&#9776;</label>
-            {/* <!-- NAVIGATION MENUS --> */}
-            <div className="menu">
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/login">Hello, Log In</Link></li>
-                <li className="signup"><Link to="/">Sign Up</Link></li>
-                <li><Link to="/contact">Orders and Returns</Link></li>
+        <div className="navbar">
+            <img src="http://pngimg.com/uploads/amazon/amazon_PNG25.png" alt="amznLogo" />
+
+            <div className="navbar_searchbar">
+                <input className="searchbar_input" type="text" />
             </div>
-        </ul>
-    </nav>
-    </>        
+
+            <div className="navbar_nav">
+                <div className="nav_option">
+                    <span>Home</span>
+                </div>
+
+
+                <div className="nav_option">
+                <span>Log In</span>
+                </div>
+
+                <div className="nav_option">
+                <span> Sign Up</span>
+                </div>
+
+                <div className="cart">
+                    <img src="https://icon-library.com/images/white-shopping-bag-icon/white-shopping-bag-icon-4.jpg" alt="shoppingBag" />
+                    <span className="number_items">0</span>
+                </div>
+
+            </div>
+
+        </div>
 
     )
 }
