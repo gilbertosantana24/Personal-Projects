@@ -4,18 +4,28 @@
 }
 
 .articles img {
-    max-width: 50%;
+    width: 250px;
+    height: 200px;
+    border-radius: 12px;
     
 }
 
 .articles {
-    margin-left: 150px;
-    padding: 5px 5px 5px 5px;
+    margin-bottom: 20px;
+
 }
 
 .gridColumns {
     display: grid;
     grid-template-columns: auto auto auto auto;
-    background-color: chartreuse;
+    margin-top: 45px;
+    margin-left: 100px;
+
 }
 
+.prod_btn {
+    background-color: rgb(238, 168, 37);
+    border-style: none;
+    border-radius: 10px;
+    padding: 5px;
+}

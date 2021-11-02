@@ -1,16 +1,47 @@
-import React from 'react'
+import React, {useState} from 'react'
 
-function Signup() {
+const Signup = () => {
+
+    const [user, setUser] = useState({
+        first_name:"",
+        last_name:"",
+        birth_date:"",
+        gender:"",
+        email:"",
+        password:""
+    });
+
+    function HandleChage(event) {
+        setUser({
+                ...user,
+                [event.target.name]:event.target.value        
+        })
+    }
+
+    function HandleSubmit(event) {
+        event.preventDefault()
+        
+        const requestOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(user)
+        };
+        fetch('https://ecomerce-master.herokuapp.com/api/v1/signup', requestOptions)
+            .then(response => response.json())
+            .then(data => console.log(data));
+    };
+
+
     return (
-        <form onSubmit="">
+        <form onSubmit={(event)=>HandleSubmit(event)}>
             <div className="container mt-5">
                 <div className="row justify-content-center">
                     <div className="col-md-5">
                         <div className="form-group">
                             <label htmlFor="">First Name</label>
                             <input type="text"
-                                value=""
-                                onChange=""
+                                
+                                onChange={(event)=>HandleChage(event)}
                                 className="form-control"
                                 name="first_name"
                                 id="first_name"
@@ -22,8 +53,8 @@ function Signup() {
                         <div className="form-group">
                             <label htmlFor="">Last Name</label>
                             <input type="text" 
-                                value=""
-                                onChange=""
+                               
+                                onChange={(event)=>HandleChage(event)}
                                 className="form-control" 
                                 name="last_name" 
                                 id="last_name" 
@@ -34,9 +65,9 @@ function Signup() {
                     <div className="col-md-5">
                         <div className="form-group">
                             <label htmlFor="">Email</label>
-                                <input type="email" 
-                                    value=""
-                                    onChange=""
+                                <input name="email" type="email" 
+                                   
+                                    onChange={(event)=>HandleChage(event)}
                                     className="form-control" 
                                     name="email" 
                                     id="email" 
@@ -47,9 +78,9 @@ function Signup() {
                     <div className="col-md-5">
                         <div className="form-group">
                             <label htmlFor="">Password</label>
-                            <input type="password"
-                                value=""
-                                onChange=""
+                            <input name="password" type="password"
+                                
+                                onChange={(event)=>HandleChage(event)}
                                 className="form-control"
                                 name="password"
                                 id="password" 
@@ -61,11 +92,33 @@ function Signup() {
                         <div className="form-group">
                             <label htmlFor="">Confirm password</label>
                             <input type="password" 
-                                value=""
-                                onChange=""
                                 className="form-control" 
                                 name="password_confirm" 
                                 id="password_confirm" 
+                            />
+                        </div>
+                    </div>
+
+                    <div className="col-md-5">
+                        <div className="form-group">
+                            <label htmlFor="">BirthDay</label>
+                            <input type="date" 
+                                className="form-control" 
+                                onChange={(event)=>HandleChage(event)}
+                                name="birth_date" 
+                                id="birth_date" 
+                            />
+                        </div>
+                    </div>
+
+                    <div className="col-md-5">
+                        <div className="form-group">
+                            <label htmlFor="">Gender</label>
+                            <input type="text" 
+                                className="form-control" 
+                                onChange={(event)=>HandleChage(event)}
+                                name="gender" 
+                                id="gender" 
                             />
                         </div>
                     </div>

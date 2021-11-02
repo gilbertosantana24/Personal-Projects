@@ -1,28 +1,46 @@
 import React from "react";
 import '../Styles/grid.css';
+import { useUpdateCart } from "../Context/CartContext";
 
 const ProductsGrids = (props) => {
 
-return <div className="gridColumns">
+    const [, , add] = useUpdateCart();
 
-{
-    props.items.map(product => {
-        return <div className="articles"> 
-        <h2 className="title">{product.product_name}</h2>
-        <img src={product.image} alt="productos" />
-        
-        <p className="product_name">${product.price}</p>
 
-        <button className="add_to_bag">Add to bag</button>
-        
+
+
+    return (
+        <div className="gridColumns">
+            {props.items.map((product) => {
+                var name = product.product_name.toLowerCase();
+                if (name.startsWith(props.searchTerm)) {
+                    return (
+                        <div className="articles">
+                            <h2 className="title">{product.product_name}</h2>
+                            <img src={product.image} alt="productos" />
+
+                            <p className="product_name">${product.price}</p>
+
+                            <button className="prod_btn"
+                                onClick={() => add(product.product_name, product.price)}>
+                                Add to Cart
+                            </button>
+
+                        </div>
+                    )
+                } else {
+                    return <>
+                    </>
+                }
+            }
+            )}
+
         </div>
-    })
-}
-
-
-</div>
+    )
 
 
 }
 
 export default ProductsGrids;
+
+
