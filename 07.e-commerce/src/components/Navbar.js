@@ -8,7 +8,7 @@ const Navbar = () => {
     return (
         <div className="navbar">
             <Link to="/">
-                <img src="http://pngimg.com/uploads/amazon/amazon_PNG25.png" alt="amznLogo" />
+                <img className="amazon_pic" src="http://pngimg.com/uploads/amazon/amazon_PNG25.png" alt="amznLogo" />
             </Link>
 
             
@@ -27,7 +27,7 @@ const Navbar = () => {
 
                 <div className="cart">
                     <Link to="/cart">
-                        <img src="https://icon-library.com/images/white-shopping-bag-icon/white-shopping-bag-icon-4.jpg" alt="shoppingCart" />
+                        <img className="shopping_pic" src="https://icon-library.com/images/white-shopping-bag-icon/white-shopping-bag-icon-4.jpg" alt="shoppingCart" />
 
                     </Link>
                 </div>

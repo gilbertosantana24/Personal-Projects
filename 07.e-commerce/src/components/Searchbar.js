@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import './searchbar.css';
 
 const Searchbar = (props) => {
 
@@ -9,7 +10,7 @@ const handleChange = (e) => {
 
 return (
     <form>
-    <input 
+    <input className = "searchbar"
     onChange={(e) => handleChange(e)}
     className="searchbar"
     type="search"

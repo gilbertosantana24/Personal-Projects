@@ -16,7 +16,6 @@
 .searchbar{
     width: 1200px;
     height: 40px;
-   
 }
 
 .navbar_nav {
@@ -36,14 +35,16 @@
     
 }
 
-.navbar img {
-    height: 60px;
+.navbar .amazon_pic {
+    height: 30%;
+    width: 30%;
     margin-left: 1rem;
 }
 
-.cart img {
+.cart .shopping_pic {
     height: 30px;
-    margin-right: 20px;
+    width: 30px;
+    margin-right: 25px;
 }
 
 

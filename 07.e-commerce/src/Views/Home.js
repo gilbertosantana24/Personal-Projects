@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import * as Constants from '../constants';
+import * as constants from '../constants'
 import ProductsGrids from "../components/ProductsGrid";
 import Searchbar from "../components/Searchbar";
 import '../Styles/home.css';
@@ -13,7 +13,7 @@ const Home = () => {
 
 
     useEffect(() => {
-        fetch(Constants.apiUrl)
+        fetch(constants.apiUrl)
             .then((response) => response.json())
             .then((e) => setItems(e))
     }, []);
@@ -21,7 +21,7 @@ const Home = () => {
 
     return (
         <>
-            <h1>Home</h1>
+
 
             <Searchbar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
             

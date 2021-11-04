@@ -1,0 +1,25 @@
+.parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.item_img{
+    margin-right: 100px;
+}
+
+.item_img img {
+    width: 350px;
+    max-width: 350x;
+    height: 350px;
+    max-height: 350px;
+    border-radius: 15%;
+}
+
+.item_pg_btn{
+    background-color: #FF9900;
+    border-radius: 10px;
+    font-weight: bolder;
+    color: white;
+}
