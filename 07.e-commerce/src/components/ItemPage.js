@@ -16,7 +16,7 @@ const ItemPage = (props) => {
             </div>
 
             <div className="item_info">
-                <h1>{props.item.product_name}</h1>
+                <h1 className="item_title">{props.item.product_name}</h1>
                 <p>{props.item.brand}</p>
                 <img className="stars" src="https://www.starpng.com/public/uploads/preview/5-star-rating-png-21573998074syeo5vib9a.png" alt="stars" />
                 <p className="amazon_choice">Amazon's Choice </p>
