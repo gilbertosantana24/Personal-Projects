@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
+import GlobalSearch from './GlobalSearch';
 import '../Styles/nav.css';
 
 
@@ -11,7 +12,10 @@ const Navbar = () => {
                 <img className="amazon_pic" src="http://pngimg.com/uploads/amazon/amazon_PNG25.png" alt="amznLogo" />
             </Link>
 
-            
+            <div className="globalSearch">
+            <GlobalSearch />
+            </div>
+
             <div className="navbar_nav">
                 <div className="nav_option">
                     <Link to="/">Home</Link>

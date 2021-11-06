@@ -3,6 +3,7 @@ import './searchbar.css';
 
 const Searchbar = (props) => {
 
+
 const handleChange = (e) => {
     var search = e.target.value;
     props.setSearchTerm(search.toLowerCase());
