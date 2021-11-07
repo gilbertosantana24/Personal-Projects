@@ -1,24 +1,40 @@
 import React from 'react'
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
-import * as constants from '../constants'
 import './globalsearch.css';
+import { useHistory } from "react-router";
 
-const GlobalSearch = () => {
 
-// Our sample dropdown options
-const options = ["Macbook", "Lenovo"]
+const GlobalSearch = (props) => {
 
-return (
-	<div className="combobox" >
-	<Autocomplete
-		options={options}
-		
-		renderInput={(params) =>
-		<TextField {...params} label="Search Items" variant="outlined" />}
-	/>
-	</div>
-);
+	const history = useHistory();
+
+
+	const handleClick = (value) => {
+
+		if (value !== null) {
+			history.push(`/${value._id}`);
+		}
+
+	};
+
+	return (
+
+		<div className="combobox" >
+
+			<Autocomplete
+				options={props.items}
+				getOptionLabel={(option) => option.product_name}
+				clearOnEscape={true}
+				onChange={ (event,value) => handleClick(value) }
+				renderInput={(params) =>
+					<TextField {...params} placeholder="Search Items" />}
+
+			/>
+
+
+		</div>
+	);
 }
 
 export default GlobalSearch

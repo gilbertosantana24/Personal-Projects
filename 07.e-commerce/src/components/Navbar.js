@@ -1,10 +1,13 @@
 import React from "react";
+import * as constants from '../constants';
 import { Link } from 'react-router-dom';
 import GlobalSearch from './GlobalSearch';
 import '../Styles/nav.css';
 
 
-const Navbar = () => {
+const Navbar = (props) => {
+
+    var items = props.items;
 
     return (
         <div className="navbar">
@@ -13,7 +16,12 @@ const Navbar = () => {
             </Link>
 
             <div className="globalSearch">
-            <GlobalSearch />
+
+            
+            <GlobalSearch items={items} />
+
+
+
             </div>
 
             <div className="navbar_nav">

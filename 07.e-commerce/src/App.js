@@ -8,6 +8,7 @@ import Cart from './Views/Cart';
 import {CartProvider} from './Context/CartContext';
 import * as constants from './constants';
 import ItemPage from './components/ItemPage';
+import GlobalSearch from './components/GlobalSearch';
 
 
 function App() {
@@ -25,7 +26,10 @@ function App() {
       <CartProvider>
 
       <Router>
-      <Navbar />
+      
+      
+      <Navbar items={items} />
+      
       <header className="App-header">
       <Switch>
 
@@ -43,6 +47,21 @@ function App() {
         </Route>
         )
       })}
+
+      
+{items.map((e) => {
+        return (
+        <Route path={`/${e._id}`}>
+          <GlobalSearch item={e}  />
+        </Route>
+        )
+      })}
+
+
+
+
+
+
 
       <Route path="/login">
       <Login />
