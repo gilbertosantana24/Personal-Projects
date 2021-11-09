@@ -19,6 +19,14 @@
     margin-top: 10px;
     width: 98%;
     margin-left: 20px;
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+}
+
+.item_title{
+    width: 140px;
+    max-width: 140px;
 }
 
 .remove_item{
@@ -44,9 +52,14 @@
 
 .number_items_btn{
     display: flex;
-    width: 15%;
-    justify-content: space-between;
+    width: 200px;
+    max-width: 200px;
+    justify-content: space-evenly;
     align-items: center;
+}
+
+.number_items_btn p {
+    margin-top: 10px;
 }
 
 .updownbtn {

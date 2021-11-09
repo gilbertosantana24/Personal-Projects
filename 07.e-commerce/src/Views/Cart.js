@@ -28,30 +28,30 @@ const Cart = () => {
             {useCart().map((item) => {
                 return (
                     <div className="order_desc">
-                        
-                        
-                        <p>{item.name}</p>
-                        
 
-                        
+                        <div className="item_title">
+                        <p>{item.name}</p>
+                        </div>
+
+
                         {/*<p>{item.qty}</p>*/}
-                        
+
 
                         <div className="number_items_btn">
                             <button className="updownbtn" onClick={() => plus(item.name)}>+</button>
-                            <p>{item.qty}</p>
+                            <p><strong>{item.qty}</strong></p>
                             <button className="updownbtn" onClick={() => minus(item.name)}>-</button>
                         </div>
 
-                        
+
                         <p> <strong>Price:</strong> ${item.price}</p>
-                       
+
 
                         {/*<p> <strong> Total: </strong> ${item.qty * item.price}</p>*/}
 
-                        
-                        <button className="remove_item" onClick={() => remove(item.name) }>Remove</button>
-                        
+
+                        <button className="remove_item" onClick={() => remove(item.name)}>Remove</button>
+
                     </div>
                 );
             })};

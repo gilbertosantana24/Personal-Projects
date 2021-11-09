@@ -6,6 +6,7 @@ import Login from './Views/Login';
 import Signup from './Views/Signup';
 import Cart from './Views/Cart';
 import {CartProvider} from './Context/CartContext';
+import "react-toastify/dist/ReactToastify.css";
 import * as constants from './constants';
 import ItemPage from './components/ItemPage';
 import GlobalSearch from './components/GlobalSearch';

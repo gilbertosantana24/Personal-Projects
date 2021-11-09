@@ -1,11 +1,23 @@
 import React from 'react'
 import './itempage.css';
 import { useUpdateCart } from '../Context/CartContext';
+import { ToastContainer, toast } from "react-toastify";
 
 const ItemPage = (props) => {
 
     const [, , add] = useUpdateCart();
 
+    const handleClick = (productname, price) => {
+        add(productname, price);
+        notify(productname);
+    };
+
+    const notify = (item) =>
+        toast(`${item} added to cart`, {
+            autoClose: 3000,
+            hideProgressBar: true,
+            closeOnClick: true,
+        });
 
     return (
 
@@ -36,25 +48,25 @@ const ItemPage = (props) => {
                 <p><strong>SECURE TRANSACTION</strong> </p>
 
                 <div className="gift">
-                <input type="checkbox"></input>
-                <span>This Order Contains A Gift</span>
+                    <input type="checkbox"></input>
+                    <span>This Order Contains A Gift</span>
                 </div>
 
                 <div className="protection">
-                <input type="checkbox"></input>
-                <span>Add Amazon Protection Plan</span>
+                    <input type="checkbox"></input>
+                    <span>Add Amazon Protection Plan</span>
                 </div>
 
                 <div className="addToCart">
-                <button className="item_pg_btn"
-                    onClick={() => add(props.item.product_name, props.item.price)}>
-                    Add to Cart
-                </button>
+                    <button className="item_pg_btn"
+                        onClick={() => handleClick(props.item.product_name, props.item.price)}>
+                        Add to Cart
+                    </button>
                 </div>
             </div>
 
+            <ToastContainer />
         </div>
-
 
 
 

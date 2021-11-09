@@ -3,14 +3,21 @@ import * as constants from '../constants'
 import ProductsGrids from "../components/ProductsGrid";
 import Searchbar from "../components/Searchbar";
 import '../Styles/home.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Home = () => {
 
     const [items, setItems] = useState([]);
     const [searchTerm, setSearchTerm] = useState("");
-
-
+    const notify = (product) =>
+    toast(`${product} added to cart`, {
+        autoClose: 3000,
+        hideProgressBar: true,
+        closeOnClick: true,
+    });
+    
 
     useEffect(() => {
         fetch(constants.apiUrl)
@@ -26,7 +33,14 @@ const Home = () => {
             <Searchbar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
             
 
-            <ProductsGrids items={items} searchTerm={searchTerm} />
+            <ProductsGrids 
+            items={items} 
+            alert={notify}
+            searchTerm={searchTerm}
+            
+            />
+
+            <ToastContainer />
 
         </>
     )
