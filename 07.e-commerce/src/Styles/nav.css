@@ -11,7 +11,11 @@
     color: white;
 }
 
-
+.user{
+    padding-right: 10px;
+    font-weight: bolder;
+    margin-top: 2px;
+}
 
 .searchbar{
     width: 1200px;
@@ -21,6 +25,8 @@
 .navbar_nav {
     display: flex;
     justify-content: space-evenly;
+    width: 400px;
+    
 }
 
 .nav_option {

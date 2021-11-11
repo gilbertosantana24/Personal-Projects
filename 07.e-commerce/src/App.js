@@ -6,6 +6,7 @@ import Login from './Views/Login';
 import Signup from './Views/Signup';
 import Cart from './Views/Cart';
 import {CartProvider} from './Context/CartContext';
+import { UserProvider } from './Context/userContext';
 import "react-toastify/dist/ReactToastify.css";
 import * as constants from './constants';
 import ItemPage from './components/ItemPage';
@@ -25,7 +26,7 @@ function App() {
   return (
     <div className="App">
       <CartProvider>
-
+      <UserProvider>
       <Router>
       
       
@@ -82,6 +83,7 @@ function App() {
 
       </header>
     </Router >
+    </UserProvider>
     </CartProvider>
     </div>
 

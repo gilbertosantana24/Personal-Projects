@@ -1,4 +1,6 @@
 import React, {useState} from 'react'
+import { useUserContext } from '../Context/userContext';
+import {useHistory} from 'react-router';
 
 const Signup = () => {
 
@@ -10,6 +12,11 @@ const Signup = () => {
         email:"",
         password:""
     });
+
+
+    var history = useHistory();
+
+    const signUping = useUserContext();
 
     function HandleChage(event) {
         setUser({
@@ -28,12 +35,19 @@ const Signup = () => {
         };
         fetch('https://ecomerce-master.herokuapp.com/api/v1/signup', requestOptions)
             .then(response => response.json())
-            .then(data => console.log(data));
+            .then(data => console.log(data))
+            .then(history.push("/login"));
+            
     };
 
 
+
+
     return (
-        <form onSubmit={(event)=>HandleSubmit(event)}>
+        <>
+        {
+            !signUping ? <> 
+            <form onSubmit={(event)=>HandleSubmit(event)}>
             <div className="container mt-5">
                 <div className="row justify-content-center">
                     <div className="col-md-5">
@@ -129,7 +143,14 @@ const Signup = () => {
                 </div>
             </div>
         </form>
+            </> : <>
+                <h3>You Are Logged In</h3>
+
+            </>
+        }
+        
     
+    </>
     
     )
 }

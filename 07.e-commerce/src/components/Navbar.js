@@ -3,11 +3,14 @@ import * as constants from '../constants';
 import { Link } from 'react-router-dom';
 import GlobalSearch from './GlobalSearch';
 import '../Styles/nav.css';
+import { useUserContext } from "../Context/userContext";
 
 
 const Navbar = (props) => {
 
     var items = props.items;
+
+    var usuario = useUserContext();
 
     return (
         <div className="navbar">
@@ -23,8 +26,16 @@ const Navbar = (props) => {
 
 
             </div>
+            
+           
 
             <div className="navbar_nav">
+
+            <div className="user">
+            {usuario && <p>Hello, {usuario.user.first_name}</p>}
+            </div>
+
+
                 <div className="nav_option">
                     <Link to="/">Home</Link>
                 </div>
