@@ -1,0 +1,20 @@
+{
+  "name": "graphql-mongodb2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.18.0",
+    "graphql": "^16.4.0",
+    "graphql-tools": "^8.2.8",
+    "mongoose": "^6.3.1",
+    "nodemon": "^2.0.15"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

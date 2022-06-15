@@ -1,9 +1,10 @@
 import './App.css';
+import TweetBox from './TweetBox';
 
 function App() {
   return (
     <div className="App">
-     <h1>Twittter</h1>
+      <TweetBox />
     </div>
   );
 }
